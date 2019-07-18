@@ -6,7 +6,12 @@ public class LabNumber4 {
 		Scanner scan = new Scanner(System.in);
 
 		String cont = "y";
-		while (cont.equalsIgnoreCase("y")) {
+		while (!cont.equalsIgnoreCase("n")) {
+			if (!cont.equalsIgnoreCase("y")) {
+				System.out.println("You entered an invalid entry, please select y/n");
+				cont = scan.next();
+				continue;
+			}
 			System.out.println("Enter a whole number: ");
 			int x = scan.nextInt();
 			System.out.println("Number     Squared     cubed");
